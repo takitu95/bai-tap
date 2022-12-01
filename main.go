@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	var a1, b1 int 
+	var a1, b1 int
 	a1 = 10000
 	b1 = 20000
 	fmt.Println (a1 + b1)
@@ -28,6 +28,21 @@ func main() {
 	var email = "tangthuan1008@gmail.com"
 	fmt.Println (email)
 	
-	var A bool = false
-	fmt.Println(A)
-}
+	var x, a, b int 
+	a = 2
+	b = 4
+	x = a^2 + 2*a*b + b^2
+	if x == 22 {
+		fmt.Println ("true")
+		}else{
+			fmt.Println ("false")
+		}	
+
+	number := 10
+	switch number {
+	case 1:
+		fmt.Println ("number = 10")
+	case 10:
+		fmt.Println ("number = 10")
+	}
+	}	
