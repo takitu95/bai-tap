@@ -1,30 +1,24 @@
 package main
 
-import "testing"
+import (
+	"testing"
+)
 
-func TestKiemtrahieuduonghaykhong(t *testing.T) {
+func TestPrintTeamNumber(t *testing.T) {
 	type args struct {
-		Numbera int
-		Numberb int
+		Number int
 	}
 	tests := []struct {
 		name string
 		args args
-		want bool
+		want string
 	}{
-		{
-			name: "happycase",
-			args: args{
-				Numbera: 1,
-				Numberb: 1,
-			},
-			want: true,
-		},
+		// TODO: Add test cases.
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := Kiemtrahieuduonghaykhong(tt.args.Numbera, tt.args.Numberb); got != tt.want {
-				t.Errorf("Kiemtrahieuduonghaykhong() = %v, want %v", got, tt.want)
+			if got := PrintTeamNumber(tt.args.Number); got != tt.want {
+				t.Errorf("PrintTeamNumber() = %v, want %v", got, tt.want)
 			}
 		})
 	}
