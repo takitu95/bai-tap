@@ -6,7 +6,8 @@ import (
 )
 
 func main() {
-	PrintTeamNumber(100)
+	StringResul := PrintTeamNumber(100)
+	fmt.Println(StringResul)
 }
 
 //	func main() {
@@ -25,11 +26,11 @@ func PrintAPlusB() {
 // Define PrintTeamNumber
 func PrintTeamNumber(number int) string {
 	ValueAfterConvert := strconv.Itoa(number)
-	return "Thanh vien nhom" + ValueAfterConvert
+	return "Team number " + ValueAfterConvert
 }
 func PrintAddress(Number int, Address string) string {
 	ValueAfterConvert1 := strconv.Itoa(Number)
-	return "Dia chi:" + Address + "So nha:" + ValueAfterConvert1
+	return "So nha " + ValueAfterConvert1 + ", " + "Dia chi " + Address
 }
 
 func PrintDate(Date int) string {
