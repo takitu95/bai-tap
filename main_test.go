@@ -4,55 +4,27 @@ import (
 	"testing"
 )
 
-func TestPrintAddress(t *testing.T) {
+func TestIsPrime(t *testing.T) {
 	type args struct {
-		Number  int
-		Address string
+		n int32
 	}
 	tests := []struct {
 		name string
 		args args
-		want string
+		want bool
 	}{
 		{
-			name: "TestPrintAddress",
+			name: "TestIsPrime",
 			args: args{
-				Number:  1,
-				Address: "Hanoi",
+				n: 5,
 			},
-			want: "So nha 1, Dia chi Hanoi",
+			want: true,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := PrintAddress(tt.args.Number, tt.args.Address); got != tt.want {
-				t.Errorf("PrintAddress() = %v, want %v", got, tt.want)
-			}
-		})
-	}
-}
-
-func TestPrintTeamNumber(t *testing.T) {
-	type args struct {
-		number int
-	}
-	tests := []struct {
-		name string
-		args args
-		want string
-	}{
-		{
-			name: "TestPrintTeamNumber",
-			args: args{
-				number: 100,
-			},
-			want: "Team number 100",
-		},
-	}
-	for _, tt := range tests {
-		t.Run(tt.name, func(t *testing.T) {
-			if got := PrintTeamNumber(tt.args.number); got != tt.want {
-				t.Errorf("PrintTeamNumber() = %v, want %v", got, tt.want)
+			if got := IsPrime(tt.args.n); got != tt.want {
+				t.Errorf("IsPrime() = %v, want %v", got, tt.want)
 			}
 		})
 	}
