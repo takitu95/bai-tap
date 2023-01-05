@@ -4,19 +4,23 @@ import (
 	"fmt"
 )
 
-func IsPrime(n int32) bool {
-	fmt.Scanln(&n)
-	if n <= 1 {
-		return false
-	}
-	for i := int32(2); i < n; i++ {
-		if n%i == 0 {
-			return false
-		}
-	}
-	return true
-}
 func main() {
-	var n int32
-	fmt.Println(IsPrime(n))
+	var a, b int
+	fmt.Println("Hãy nhập số a")
+	fmt.Scanln(&a)
+	fmt.Println("Hãy nhập số b")
+	fmt.Scanln(&b)
+	c := a + b
+	c1 := a - b
+	fmt.Println("a + b =", c)
+	fmt.Println("a - b =", c1)
+	if a == b {
+		fmt.Println("a = b")
+	}
+	if a > b {
+		fmt.Println("a > b")
+	}
+	if a < b {
+		fmt.Println("a < b")
+	}
 }
