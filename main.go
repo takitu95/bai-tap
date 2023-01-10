@@ -42,7 +42,7 @@ func main() {
 	fmt.Println("File đang nằm ở đường dẫn:" + path)
 
 	// Kiểm tra số lượng file có trong thư mục
-	files, err := ioutil.ReadDir(".")
+	files, err := ioutil.ReadDir(path)
 	fmt.Println("Các file đang có trong thư mục:")
 	if err != nil {
 		log.Fatal(err)
@@ -59,8 +59,7 @@ func main() {
 		fmt.Println("File không tồn tại")
 	} else {
 		fmt.Println("File tồn tại")
-		os.Remove(filename)
-		fmt.Println("File đã bị xoá")
+		// xoá file dùng os.remove("tên object")
 	}
 	// Nhập username, password, email:
 	AccountRegisterObject := AccountRegisterModule{"Adminstrator", "$2y$10$k8P53MG4YkugxUDBzPIc2urVOIMOaS7s3gOjGIoH0JNOUEWwjjka", "Xtown@gmail.com"}
